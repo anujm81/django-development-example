@@ -29,9 +29,3 @@ urlpatterns = [
     url(r"^posts/", include("posts.urls", namespace="posts")),
     url(r"^groups/",include("groups.urls", namespace="groups")),
 ]
-
-if settings.DEBUG:
-    import debug_toolbar
-    urlpatterns = [
-       url(r'^__debug__/', include(debug_toolbar.urls))
-    ]+ urlpatterns
